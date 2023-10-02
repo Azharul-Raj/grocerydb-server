@@ -9,7 +9,7 @@ router.route('/products')
 
 
 router.route('/products/:id')
-.patch()
+.patch(productServices.updateProduct)
 .delete(productServices.deleteProduct);
 
 module.exports=router;

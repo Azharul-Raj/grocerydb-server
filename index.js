@@ -4,6 +4,7 @@ const cors=require('cors');
 const {createClient} =require('@supabase/supabase-js');
 const productRouter=require('./router/product.router');
 
+
 const app=express();
 app.use(cors());
 app.use(express.json());
@@ -16,4 +17,5 @@ app.listen(port,()=>{
 app.get('/',(req,res)=>{
     res.send('Server is up and running.')
 })
+
 app.use('/api/v1',productRouter);
